@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Blog</title>
+</head>
+<body>
+
+    
+
+<div class="container">
+    <header>
+        <h1>Welcome to My Recipe Blog</h1>
+    </header>
+    <nav>
+        <ul id="nav-ul">
+            <li><a href=""class="navbutton">Home</a></li>
+            <li><a href=""class="navbutton">About us</a></li>
+            <li><a href=""class="navbutton">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+    <div class="intro">
+        <p>Welcome to my Recipe Blog, where I share delicious and easy-to-follow recipes from around the world! Whether you're in the mood for comforting pasta, flavorful rice, or a hearty curry, we’ve got something for everyone. Let's get cooking!</p>
+    </div>
+
+    <div class="tabs">
+        <button class="tablinks" onclick="openRecipe(event, 'Spaghetti')">Spaghetti</button>
+        <button class="tablinks" onclick="openRecipe(event, 'ChineseRice')">Chinese Fried Rice</button>
+        <button class="tablinks" onclick="openRecipe(event, 'ButterChicken')">Butter Chicken</button>
+    </div>
+
+    <div id="Spaghetti" class="tabcontent">
+        <h2>Spaghetti Bolognese</h2>
+        <img src="https://www.thefoodjoy.com/wp-content/uploads/2019/07/pasta-bolognese-2.jpg" alt="Spaghetti Bolognese" class="recipe-image">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>400g spaghetti</li>
+            <li>200g minced beef</li>
+            <li>1 onion, diced</li>
+            <li>2 garlic cloves, minced</li>
+            <li>400g canned tomatoes</li>
+            <li>Salt and pepper to taste</li>
+            <li>Grated Parmesan cheese for serving</li>
+        </ul>
+        <h3>Instructions</h3>
+        <p>1. Cook the spaghetti according to the package instructions.</p>
+        <p>2. In a large pan, heat oil over medium heat. Sauté the onion and garlic until softened.</p>
+        <p>3. Add minced beef and cook until browned.</p>
+        <p>4. Stir in the canned tomatoes, season with salt and pepper, and simmer for 15 minutes.</p>
+        <p>5. Drain the spaghetti and toss with the sauce.</p>
+        <p>6. Serve with grated Parmesan cheese on top.</p>
+    </div>
+
+    <div id="ChineseRice" class="tabcontent">
+        <h2>Chinese Fried Rice</h2>
+        <img src="https://th.bing.com/th/id/OIP.LGDV7P2NrFQzAZ3ncs1LzAAAAA?rs=1&pid=ImgDetMain.jpg" alt="Chinese Fried Rice" class="recipe-image">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 cups cooked rice</li>
+            <li>1/2 cup peas</li>
+            <li>1/2 cup diced carrots</li>
+            <li>2 eggs, beaten</li>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp sesame oil</li>
+            <li>1 garlic clove, minced</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions</h3>
+        <p>1. Heat sesame oil in a wok over medium heat. Add garlic and sauté until fragrant.</p>
+        <p>2. Add the peas and carrots, cooking until they are tender.</p>
+        <p>3. Push the vegetables to the side and pour in the beaten eggs, scrambling them in the pan.</p>
+        <p>4. Add the cooked rice and soy sauce, stirring everything together.</p>
+        <p>5. Stir-fry for 5 minutes, season with salt and pepper, and serve hot.</p>
+    </div>
+
+    <div id="ButterChicken" class="tabcontent">
+        <h2>Butter Chicken</h2>
+        <img src="https://th.bing.com/th/id/OIP.JK5NaVyloMQFazIWJJ_lRwHaLF?rs=1&pid=ImgDetMain.jpg" alt="Butter Chicken" class = "recipe-image">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>500g chicken breast, cubed</li>
+            <li>1 cup yogurt</li>
+            <li>2 tbsp butter</li>
+            <li>1 onion, diced</li>
+            <li>2 garlic cloves, minced</li>
+            <li>1 tsp garam masala</li>
+            <li>1 tsp turmeric</li>
+            <li>1/2 cup cream</li>
+            <li>1/2 cup tomato puree</li>
+            <li>Salt to taste</li>
+        </ul>
+        <h3>Instructions</h3>
+        <p>1. Marinate the chicken with yogurt, garam masala, and turmeric for at least 1 hour.</p>
+        <p>2. In a large pan, melt the butter and sauté the onions and garlic until softened.</p>
+        <p>3. Add the marinated chicken and cook until browned.</p>
+        <p>4. Stir in the tomato puree and simmer for 10 minutes.</p>
+        <p>5. Pour in the cream, stir well, and cook for another 5 minutes.</p>
+        <p>6. Serve hot with naan or rice.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Recipe Blog - All Rights Reserved</p>
+</footer>
+
+<script>
+    function openRecipe(evt, recipeName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(recipeName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Set the first tab to open by default
+    document.getElementsByClassName('tablinks')[0].click();
+</script>
+
+</body>
+</html>

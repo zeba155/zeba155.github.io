@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+    margin: 0px;
+    font-size: 3vh;
+    font-family: var(--font-roxborough-cf);
+    background-color: rgba(250, 250, 250, 0.9);
+    box-sizing: border-box;
+}
+
+/* Flexbox for Container */
+.container {
+    width: 100%; /* Full width for the container */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px; /* Add padding to prevent overlap with footer */
+    box-sizing: border-box;
+}
+
+/* Full-Width Header */
+header {
+    width: 100%; /* Header stretches full width */
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Navigation Menu - Full Width */
+#nav-ul {
+    display: flex;
+    justify-content: space-between; /* Evenly space out buttons */
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    width: 100%; /* Stretch nav buttons full width */
+    box-sizing: border-box;
+}
+
+#nav-ul li {
+    margin: 0 10px;
+    flex: 1; /* Ensure buttons take equal space */
+}
+
+#nav-ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    border-radius: 20px;
+    text-align: center;
+    display: block; /* Make the anchor fill the button area */
+    transition: background-color 0.3s ease;
+}
+
+#nav-ul li a:hover {
+    background-color: #FF7043;
+}
+
+
+/* Introduction Section */
+.intro {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+    width: 100%; /* Stretch the intro text full width */
+    box-sizing: border-box;
+}
+
+/* Tabs Section */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.tablinks {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.tablinks.active {
+    background-color: #2196F3;
+    color: white;
+    border-bottom: 3px solid #2196F3;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.tabcontent h2 {
+    color: #2196F3;
+    grid-column: span 2;
+}
+
+.recipe-image {
+    width: 60%; /* Adjust this percentage to your desired size */
+    max-width: 500px; /* Prevent the image from getting too large */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* No fixed positioning to prevent overlap */
+}
